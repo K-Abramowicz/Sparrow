@@ -10,7 +10,7 @@ import java.io.IOException;
 import static controller.utils.ServletsUtils.LOGIN;
 
 
-@WebFilter(filterName = "loggedInFilter", servletNames = {"usersServlet", "followServlet","unfollowServlet"})
+@WebFilter(filterName = "loggedInFilter", servletNames = {"usersServlet", "followServlet","unfollowServlet","messageServlet"})
 public class LoggedInFilter implements Filter {
 
     @Override
