@@ -6,7 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static controller.HomeServlet.LOGIN;
+
+import static controller.utils.ServletsUtils.LOGIN;
 
 
 @WebFilter(filterName = "loggedInFilter", servletNames = {"usersServlet", "followServlet","unfollowServlet"})

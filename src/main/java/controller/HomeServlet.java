@@ -11,9 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static controller.utils.ServletsUtils.LOGIN;
+
 @WebServlet(name = "homeServlet", urlPatterns = {"", "/login"})
 public class HomeServlet extends HttpServlet {
-    public static final String LOGIN = "login";
+
     private static final String PASSWORD = "password";
     private static final String REMEMBER = "remember";
     private static final String CHECKBOX_SELECTED ="on";

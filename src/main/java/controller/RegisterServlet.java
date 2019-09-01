@@ -1,6 +1,7 @@
 package controller;
 
-import static controller.HomeServlet.LOGIN;
+
+import static controller.utils.ServletsUtils.LOGIN;
 
 import java.io.IOException;
 import java.util.Date;

@@ -1,8 +1,10 @@
 package controller;
 
 
-import static controller.HomeServlet.LOGIN;
 
+import static controller.utils.ServletsUtils.LOGIN;
+
+import controller.utils.ServletsUtils;
 import dao.UserDAO;
 import java.io.IOException;
 import java.util.List;
@@ -28,7 +30,7 @@ public class UsersServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String currentUserLogin = (String) request.getSession().getAttribute(LOGIN);
+        String currentUserLogin = ServletsUtils.getUserLoginFromSession(request);
         List<User> followedUsers = userDao.getFollowedUsers(currentUserLogin);
         List<User> notFollowedUsers = userDao.getNotFollowedUsers(currentUserLogin);
         request.setAttribute("followedUsers", followedUsers);
